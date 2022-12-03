@@ -24,5 +24,17 @@ function iniciar() {
   } else {
     lofi.play()
     pause.style.setProperty('display', 'block', 'important')
+
+    localStorage.setItem('acao', String(acao.value))
+    localStorage.setItem('pausa', String(pausa.value))
+    localStorage.setItem('sessoes', String(sessoes.value))
+
+    document
+      .getElementById('config')
+      .style.setProperty('display', 'none', 'important')
+
+    document
+      .getElementById('timer')
+      .style.setProperty('display', 'block', 'important')
   }
 }
